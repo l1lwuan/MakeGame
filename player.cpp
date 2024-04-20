@@ -36,26 +36,34 @@ void Player::render() {
 }
 
 void Player::update() {
-    if (round) {
-        angle += M_PI / 180;
-        if (angle >= 11 * M_PI / 6) {
-            round = false;
+    if (isMoving) {
+        if (round) {
+            angle += M_PI / 180;
+            if (angle >= 11 * M_PI / 6) {
+                round = false;
+            }
         }
+        else {
+            angle -= M_PI / 180;
+            if (angle <= 7 * M_PI / 6) {
+                round = true;
+            }
+        }
+
+        destRect.x = centerX + static_cast<int>(radius * -cos(angle)) - destRect.w / 2;
+        destRect.y = centerY + static_cast<int>(radius * -sin(angle)) - destRect.h / 2;
     }
     else {
-        angle -= M_PI / 180;
-        if (angle <= 7 * M_PI / 6) {
-            round = true;
-        }
+        destRect.x = -10;
+        destRect.y = -10;
     }
-
-    destRect.x = centerX + static_cast<int>(radius * -cos(angle)) - destRect.w / 2;
-    destRect.y = centerY + static_cast<int>(radius * -sin(angle)) - destRect.h / 2;
 }
 
-//void Player::handleEvent(SDL_Event& e) {
-//    
-//}
-//
-//
-//
+void Player::handleEvent(SDL_Event& e) {
+    if (e.type == SDL_KEYDOWN && e.key.repeat == 0 && e.key.keysym.sym == SDLK_SPACE) {
+        isMoving = false;
+    }
+}
+
+
+

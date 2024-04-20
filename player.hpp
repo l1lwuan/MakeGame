@@ -22,6 +22,7 @@ private:
     int radius;
     double angle;
     bool round;
+    bool isMoving=true;
 };
 
 #endif // PLAYER_HPP

@@ -21,8 +21,8 @@ Character::Character(SDL_Renderer* renderer, const char* imagePath, int x, int y
     spriteSheet = SDL_CreateTextureFromSurface(renderer, surface);
     SDL_FreeSurface(surface);
 
-    destRect.w = frameWidth;
-    destRect.h = frameHeight;
+    destRect.w = 55;
+    destRect.h = 55;
     destRect.x = posX;
     destRect.y = posY;
 }

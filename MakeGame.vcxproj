@@ -104,13 +104,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2_image-devel-2.8.0-VC\SDL2_image-2.8.0\include;C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2_mixer-devel-2.8.0-VC\SDL2_mixer-2.8.0\include;C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2_ttf-2.22.0\include;C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2-devel-2.30.0-VC %281%29\SDL2-2.30.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2-devel-2.30.0-VC %281%29\SDL2-2.30.0\include;C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2_ttf-devel-2.22.0-VC %282%29\SDL2_ttf-2.22.0\include;C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2_mixer-devel-2.8.0-VC\SDL2_mixer-2.8.0\include;C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2_image-devel-2.8.0-VC\SDL2_image-2.8.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2_image-devel-2.8.0-VC\SDL2_image-2.8.0\lib\x64;C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2_mixer-devel-2.8.0-VC\SDL2_mixer-2.8.0\lib\x64;C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2_ttf-2.22.0\lib\x64;C:\Users\thuyb\source\repos\SetupSDL2\SDL2_lib\SDL2-devel-2.30.0-VC %281%29\SDL2-2.30.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2-devel-2.30.0-VC %281%29\SDL2-2.30.0\lib\x64;C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2_ttf-devel-2.22.0-VC %282%29\SDL2_ttf-2.22.0\lib\x64;C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2_mixer-devel-2.8.0-VC\SDL2_mixer-2.8.0\lib\x64;C:\Users\thuyb\source\repos\MakeGame\SDL2_lib\SDL2_image-devel-2.8.0-VC\SDL2_image-2.8.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2test.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -135,6 +135,7 @@
     <ClCompile Include="player.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="rob.cpp" />
     <ClCompile Include="timer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,7 @@
     <ClInclude Include="boss.hpp" />
     <ClInclude Include="player.hpp" />
     <ClInclude Include="character.hpp" />
+    <ClInclude Include="rob.hpp" />
     <ClInclude Include="timer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
