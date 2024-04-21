@@ -17,8 +17,12 @@ private:
 	int centerX;
 	int centerY;
 	int radius;
+	int hitboxWidth;
+	int hitboxHeight;
 	double angle;
 	bool round;
 	bool isMoving = true;
+	bool keepDirection = false;
 };
+
 #endif // !ROB_HPP

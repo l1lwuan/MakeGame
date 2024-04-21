@@ -6,28 +6,27 @@
 
 class Character {
 public:
-    Character(SDL_Renderer* renderer, const char* imagePath, int x, int y, int minX, int maxX, int minY, int maxY, int frameWidth, int frameHeight, int numFrames, int speed);
+    Character(SDL_Renderer* renderer, const char* imagePath, int screenWidth, int screenHeight, int frameWidth, int frameHeight, int numFrames, int speed);
     ~Character();
     void render();
-    void move();
+    void move(int screenWidth, int screenHeight);
     void updateAnimation();
-
+    void updateHitbox();
 private:
     SDL_Rect destRect;
+    SDL_Rect hitbox;
     SDL_Renderer* renderer;
     SDL_Texture* spriteSheet;
     int numFrames;
     int frameWidth;
     int frameHeight;
     int currentFrame;
-    int minX;
-    int minY;
-    int maxX;
-    int maxY;
     int posX;
     int posY;
     int speed;
     bool movingLeft;
+
+    SDL_Surface* remove(SDL_Surface* surface);
 };
 
 #endif // CHARACTER_HPP

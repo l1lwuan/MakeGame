@@ -1,12 +1,14 @@
 ﻿#include <iostream>
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_ttf.h>
 #include <string>
 #include "background.hpp"
 #include "character.hpp"
 #include "player.hpp"
 #include "timer.hpp"
 #include "rob.hpp"
+#include "mixer.hpp"
 
 SDL_Window* window = nullptr;
 SDL_Renderer* renderer = nullptr;
@@ -14,7 +16,7 @@ SDL_Color textColor = { 0, 0, 0, 255 };
 TTF_Font* font = nullptr;
 
 bool init() {
-    if (SDL_Init(SDL_INIT_EVERYTHING) != 0 || TTF_Init()!=0) {
+    if (SDL_Init(SDL_INIT_EVERYTHING) != 0 || TTF_Init() != 0) {
         std::cout << "Failed";
         return false;
     }
@@ -39,6 +41,12 @@ bool init() {
         std::cout << "Failed";
         return false;
     }
+
+    if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048) < 0) {
+        std::cout << "Failed to open audio: " << Mix_GetError() << std::endl;
+        return false;
+    }
+
     return true;
 }
 
@@ -49,6 +57,8 @@ void close() {
     SDL_Quit();
     TTF_CloseFont(font);
     TTF_Quit();
+    Mix_CloseAudio();
+    Mix_Quit();
 }
 
 void renderText(const std::string& text, int x, int y) {
@@ -88,27 +98,36 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    Background background1(renderer, "smt.png");
+    Background background1(renderer, "lastone.png");
+
+    int centerX = 650;
+    int centerY = 330;
+    int radius = 65;
+    Player player(renderer, "pointer.png", centerX, centerY, radius);
+
+    Rob rob(renderer, "daycau.png", 650, 330, 0);
 
     Timer timer;
     timer.start();
 
-    Character fish0(renderer, "squidSwim.png", 700, 500, 400, 800, 350, 350, 44, 48, 6, 1);
-    Character fish1(renderer, "squidSwim.png", 300, 600, 300, 1150, 650, 650, 44, 48, 6, 2);
-    Character fish2(renderer, "angleSwim.png", 500, 680, 300, 1150, 650, 650, 50, 48, 6, 1);
-    Character fish3(renderer, "jellySwim.png", 1000, 450, 200, 550, 1200, 550, 50, 48, 4, 0);
-    Character fish4(renderer, "jellySwim.png", 300, 490, 200, 550, 1200, 550, 50, 48, 4, 0);
-    Character fish5(renderer, "jellySwim.png", 700, 530, 200, 550, 1200, 550, 50, 48, 4, 0);
-    Character fish6(renderer, "eelSwim.png", 450, 550, 300, 900, 515, 515, 49, 48, 6, 1);
-    Character fish7(renderer, "eelSwim.png", 600, 650, 300, 1000, 650, 650, 49, 48, 6, 2);
-    Character fish8(renderer, "turtleSwim.png", 800, 400, 800, 1100, 400, 400, 44, 48, 6, 1);
-    Character fish9(renderer, "turtleSwim.png", 300, 450, 300, 500, 450, 450, 44, 48, 6, 1);
-    int centerX = 637;
-    int centerY = 340;
-    int radius = 65;
-    Player player(renderer, "pointer.png", centerX, centerY, radius);
+    Mixer mixer;
+    if (!mixer.loadMusic("merx-market-song-33936.mp3")) {
+        std::cerr << "Failed to load background music" << std::endl;
+        return 1;
+    }
+    mixer.playMusic(-1);
 
-    Rob rob(renderer, "daycau.png", 637, 305, 0);
+    Character fish0(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 1);
+    Character fish1(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 2);
+    Character fish2(renderer, "angleSwim.png", 1260, 780, 50, 48, 6, 1);
+    Character fish3(renderer, "eelSwim.png", 1260, 780, 49, 48, 6, 2);
+    Character fish4(renderer, "eelSwim.png", 1260, 780, 49, 48, 6, 1);
+    Character fish5(renderer, "turtleSwim.png", 1260, 780, 44, 48, 6, 1);
+    Character fish6(renderer, "turtleSwim.png", 1260, 780, 44, 48, 6, 2);
+    Character fish7(renderer, "turtleSwim.png", 1260, 780, 44, 48, 6, 3);
+    Character fish8(renderer, "eelSwim.png", 1260, 780, 49, 48, 6, 3);
+    Character fish9(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 3);
+    Character fish10(renderer, "angleSwim.png", 1260, 780, 50, 48, 6, 3);
 
     bool quit = false;
     SDL_Event event;
@@ -125,44 +144,36 @@ int main(int argc, char* argv[]) {
 
         rob.update();
 
-        fish0.move();
+        fish0.move(1260, 780);
+        fish1.move(1260, 780);
+        fish2.move(1260, 780);
+        fish3.move(1260, 780);
+        fish4.move(1260, 780);
+        fish5.move(1260, 780);
+        fish6.move(1260, 780);
+        fish7.move(1260, 780);
+        fish8.move(1260, 780);
+        fish9.move(1260, 780);
+        fish10.move(1260, 780);
+
         fish0.updateAnimation();
-
-        fish1.move();
         fish1.updateAnimation();
-
-
-        fish2.move();
         fish2.updateAnimation();
-
-        fish3.move();
         fish3.updateAnimation();
-
-        fish4.move();
         fish4.updateAnimation();
-
-        fish5.move();
         fish5.updateAnimation();
-
-        fish6.move();
         fish6.updateAnimation();
-
-        fish7.move();
         fish7.updateAnimation();
-
-        fish8.move();
         fish8.updateAnimation();
-
-        fish9.move();
         fish9.updateAnimation();
+        fish10.updateAnimation();
         SDL_RenderClear(renderer);
+
         background1.render({ 0, 0, 1260, 780 });
 
         player.render();
+
         rob.render();
-        int timePlayed = timer.getTicks() / 1000;
-        std::string formattedTime = formatTime(timePlayed);
-        renderText(formattedTime, 10, 10);
 
         fish0.render();
         fish1.render();
@@ -174,6 +185,10 @@ int main(int argc, char* argv[]) {
         fish7.render();
         fish8.render();
         fish9.render();
+        fish10.render();
+        int timePlayed = timer.getTicks() / 1000;
+        std::string formattedTime = formatTime(timePlayed);
+        renderText(formattedTime, 10, 10);
 
         SDL_RenderPresent(renderer);
     }
