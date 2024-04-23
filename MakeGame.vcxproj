@@ -132,6 +132,7 @@
   <ItemGroup>
     <ClCompile Include="background.cpp" />
     <ClCompile Include="boss.cpp" />
+    <ClCompile Include="hitbox.cpp" />
     <ClCompile Include="mixer.cpp" />
     <ClCompile Include="player.cpp" />
     <ClCompile Include="character.cpp" />
@@ -142,6 +143,7 @@
   <ItemGroup>
     <ClInclude Include="background.hpp" />
     <ClInclude Include="boss.hpp" />
+    <ClInclude Include="hitbox.hpp" />
     <ClInclude Include="mixer.hpp" />
     <ClInclude Include="player.hpp" />
     <ClInclude Include="character.hpp" />

@@ -33,6 +33,7 @@ Player::~Player() {
 
 void Player::render() {
     SDL_RenderCopyEx(renderer, image, NULL, &destRect, angle / M_PI * 180 + 90, NULL, SDL_FLIP_NONE);
+    SDL_RenderDrawRect(renderer, &destRect);
 }
 
 void Player::update() {
