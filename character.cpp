@@ -29,7 +29,7 @@ SDL_Point randomInitialPosition(int screenWidth, int screenHeight, int character
 }
 
 Character::Character(SDL_Renderer* renderer, const char* imagePath, int screenWidth, int screenHeight, int frameWidth, int frameHeight, int numFrames, int speed)
-    : renderer(renderer), frameWidth(frameWidth), frameHeight(frameHeight), numFrames(numFrames), speed(speed), movingLeft(false), currentFrame(0) {
+    : renderer(renderer), frameWidth(frameWidth), frameHeight(frameHeight), numFrames(numFrames), speed(speed), movingLeft(false), isMoving(true), currentFrame(0) {
 
     SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
     posX = initialPosition.x;
@@ -57,34 +57,45 @@ void Character::render() {
         flip = SDL_FLIP_HORIZONTAL;
     }
     SDL_RenderCopyEx(renderer, spriteSheet, &srcRect, &destRect, 0.0, nullptr, flip);
-    SDL_RenderDrawRect(renderer, &destRect);
 }
 
 void Character::move(int screenWidth, int screenHeight) {
-    if (movingLeft) {
-        posX -= speed;
-        if (posX <= -frameWidth) { // If character is completely off-screen on the left
-            SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
-            posX = initialPosition.x;
-            posY = initialPosition.y;
-            movingLeft = false;
+    if (isMoving) {
+        if (movingLeft) {
+            posX -= speed;
+            if (posX <= -frameWidth) { // If character is completely off-screen on the left
+                SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
+                posX = initialPosition.x;
+                posY = initialPosition.y;
+                movingLeft = false;
+            }
         }
+        else {
+            posX += speed;
+            if (posX >= screenWidth) { // If character is completely off-screen on the right
+                SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
+                posX = initialPosition.x;
+                posY = initialPosition.y;
+                movingLeft = true;
+            }
+        }
+        destRect.x = posX;
+        destRect.y = posY;
     }
     else {
-        posX += speed;
-        if (posX >= screenWidth) { // If character is completely off-screen on the right
-            SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
-            posX = initialPosition.x;
-            posY = initialPosition.y;
-            movingLeft = true;
-        }
+        SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
+        posX = initialPosition.x;
+        posY = initialPosition.y;
+        isMoving = true;
     }
-    destRect.x = posX;
-    destRect.y = posY;
 }
 
 void Character::updateAnimation() {
     currentFrame = (currentFrame + 1) % (numFrames * 15);
+}
+
+void Character::touched() {
+    isMoving = false;
 }
 
 
@@ -101,3 +112,6 @@ SDL_Surface* Character::remove(SDL_Surface* surface) {
     return surface;
 }
 
+SDL_Rect Character::getDestRect() {
+    return destRect;
+}

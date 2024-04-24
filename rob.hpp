@@ -3,7 +3,7 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
-#include "hitbox.hpp"
+
 
 
 class Rob {
@@ -13,7 +13,8 @@ public:
     void render();
     void update();
     void handleEvent(SDL_Event& e);
-
+    void touched();
+    SDL_Rect getDestRect();
 private:
     SDL_Rect destRect;
     SDL_Renderer* renderer;
@@ -23,9 +24,9 @@ private:
     int radius;
     double angle;
     bool round;
-    bool isMoving=true;
+    bool isMoving = true;
     bool keepDirection = false;
-    Hitbox hitbox;
+    
 };
 
 #endif // ROB_HPP

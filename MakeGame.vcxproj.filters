@@ -24,9 +24,6 @@
     <ClCompile Include="character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="boss.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -39,15 +36,15 @@
     <ClCompile Include="mixer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hitbox.cpp">
+    <ClCompile Include="gameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="skills.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="background.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="character.hpp">
@@ -65,7 +62,10 @@
     <ClInclude Include="mixer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hitbox.hpp">
+    <ClInclude Include="gameState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="skills.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

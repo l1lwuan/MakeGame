@@ -5,10 +5,10 @@
 #include <string>
 #include "background.hpp"
 #include "character.hpp"
-#include "player.hpp"
 #include "timer.hpp"
 #include "rob.hpp"
 #include "mixer.hpp"
+#include "gameState.hpp"
 
 SDL_Window* window = nullptr;
 SDL_Renderer* renderer = nullptr;
@@ -100,15 +100,12 @@ int main(int argc, char* argv[]) {
 
     Background background1(renderer, "lastone.png");
 
-    int centerX = 650;
-    int centerY = 330;
-    int radius = 65;
-    Player player(renderer, "pointer.png", centerX, centerY, radius);
 
-    Rob rob(renderer, "daycau.png", 650, 330, 0);
-
+    //Rob rob(renderer, "luoi.png", 650, 330, 30);
     Timer timer;
     timer.start();
+
+    GameState GameState(renderer, 1260, 780);
 
     Mixer mixer;
     if (!mixer.loadMusic("merx-market-song-33936.mp3")) {
@@ -117,7 +114,7 @@ int main(int argc, char* argv[]) {
     }
     mixer.playMusic(-1);
 
-    Character fish0(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 1);
+    /*Character fish0(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 1);
     Character fish1(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 2);
     Character fish2(renderer, "angleSwim.png", 1260, 780, 50, 48, 6, 1);
     Character fish3(renderer, "eelSwim.png", 1260, 780, 49, 48, 6, 2);
@@ -127,7 +124,7 @@ int main(int argc, char* argv[]) {
     Character fish7(renderer, "turtleSwim.png", 1260, 780, 44, 48, 6, 3);
     Character fish8(renderer, "eelSwim.png", 1260, 780, 49, 48, 6, 3);
     Character fish9(renderer, "squidSwim.png", 1260, 780, 44, 48, 6, 3);
-    Character fish10(renderer, "angleSwim.png", 1260, 780, 50, 48, 6, 3);
+    Character fish10(renderer, "angleSwim.png", 1260, 780, 50, 48, 6, 3);*/
 
     bool quit = false;
     SDL_Event event;
@@ -137,14 +134,13 @@ int main(int argc, char* argv[]) {
             if (event.type == SDL_QUIT) {
                 quit = true;
             }
-            player.handleEvent(event);
-            rob.handleEvent(event);
+            //rob.handleEvent(event);
+            GameState.handleEvent(event);
         }
-        player.update();
+        //rob.update();
+        GameState.update();
 
-        rob.update();
-
-        fish0.move(1260, 780);
+        /*fish0.move(1260, 780);
         fish1.move(1260, 780);
         fish2.move(1260, 780);
         fish3.move(1260, 780);
@@ -154,9 +150,9 @@ int main(int argc, char* argv[]) {
         fish7.move(1260, 780);
         fish8.move(1260, 780);
         fish9.move(1260, 780);
-        fish10.move(1260, 780);
+        fish10.move(1260, 780);*/
 
-        fish0.updateAnimation();
+        /*fish0.updateAnimation();
         fish1.updateAnimation();
         fish2.updateAnimation();
         fish3.updateAnimation();
@@ -166,16 +162,15 @@ int main(int argc, char* argv[]) {
         fish7.updateAnimation();
         fish8.updateAnimation();
         fish9.updateAnimation();
-        fish10.updateAnimation();
+        fish10.updateAnimation();*/
         SDL_RenderClear(renderer);
 
         background1.render({ 0, 0, 1260, 780 });
 
-        player.render();
+        //rob.render();
+        GameState.render();
 
-        rob.render();
-
-        fish0.render();
+        /*fish0.render();
         fish1.render();
         fish2.render();
         fish3.render();
@@ -185,7 +180,7 @@ int main(int argc, char* argv[]) {
         fish7.render();
         fish8.render();
         fish9.render();
-        fish10.render();
+        fish10.render();*/
         int timePlayed = timer.getTicks() / 1000;
         std::string formattedTime = formatTime(timePlayed);
         renderText(formattedTime, 10, 10);

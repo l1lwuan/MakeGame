@@ -11,7 +11,8 @@ public:
     void render();
     void move(int screenWidth, int screenHeight);
     void updateAnimation();
-    void updateHitbox();
+    void touched();
+    SDL_Rect getDestRect();
 private:
     SDL_Rect destRect;
     SDL_Rect hitbox;
@@ -25,6 +26,7 @@ private:
     int posY;
     int speed;
     bool movingLeft;
+    bool isMoving = true;
 
     SDL_Surface* remove(SDL_Surface* surface);
 };

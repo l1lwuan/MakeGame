@@ -132,22 +132,22 @@
   <ItemGroup>
     <ClCompile Include="background.cpp" />
     <ClCompile Include="boss.cpp" />
-    <ClCompile Include="hitbox.cpp" />
+    <ClCompile Include="gameState.cpp" />
     <ClCompile Include="mixer.cpp" />
-    <ClCompile Include="player.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rob.cpp" />
+    <ClCompile Include="skills.cpp" />
     <ClCompile Include="timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="background.hpp" />
     <ClInclude Include="boss.hpp" />
-    <ClInclude Include="hitbox.hpp" />
+    <ClInclude Include="gameState.hpp" />
     <ClInclude Include="mixer.hpp" />
-    <ClInclude Include="player.hpp" />
     <ClInclude Include="character.hpp" />
     <ClInclude Include="rob.hpp" />
+    <ClInclude Include="skills.hpp" />
     <ClInclude Include="timer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,2 +1,3 @@
-﻿  main.cpp
+﻿  character.cpp
+C:\Users\thuyb\source\repos\MakeGame\character.cpp(9,19): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   MakeGame.vcxproj -> C:\Users\thuyb\source\repos\MakeGame\x64\Debug\MakeGame.exe
