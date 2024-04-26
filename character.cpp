@@ -16,20 +16,20 @@ SDL_Point randomInitialPosition(int screenWidth, int screenHeight, int character
     int side = random(0, 1);
     int x, y;
 
-    if (side == 0) { 
+    if (side == 0) {
         x = -characterWidth;
-        y = random(380, screenHeight - characterHeight);
+        y = random(400, screenHeight - characterHeight);
     }
     else {
         x = screenWidth;
-        y = random(380, screenHeight - characterHeight);
+        y = random(400, screenHeight - characterHeight);
     }
 
     return SDL_Point{ x, y };
 }
 
-Character::Character(SDL_Renderer* renderer, const char* imagePath, int screenWidth, int screenHeight, int frameWidth, int frameHeight, int numFrames, int speed)
-    : renderer(renderer), frameWidth(frameWidth), frameHeight(frameHeight), numFrames(numFrames), speed(speed), movingLeft(false), isMoving(true), currentFrame(0) {
+Character::Character(SDL_Renderer* renderer, const char* imagePath, int screenWidth, int screenHeight, int frameWidth, int frameHeight, int numFrames, int speed, int point)
+    : renderer(renderer), frameWidth(frameWidth), frameHeight(frameHeight), numFrames(numFrames), speed(speed), movingLeft(false), isMoving(true), currentFrame(0), point(point) {
 
     SDL_Point initialPosition = randomInitialPosition(screenWidth, screenHeight, frameWidth, frameHeight);
     posX = initialPosition.x;
@@ -114,4 +114,8 @@ SDL_Surface* Character::remove(SDL_Surface* surface) {
 
 SDL_Rect Character::getDestRect() {
     return destRect;
+}
+
+int Character::getPoint() {
+    return point;
 }

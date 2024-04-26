@@ -131,8 +131,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="background.cpp" />
-    <ClCompile Include="boss.cpp" />
     <ClCompile Include="gameState.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="mixer.cpp" />
     <ClCompile Include="character.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,8 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="background.hpp" />
-    <ClInclude Include="boss.hpp" />
     <ClInclude Include="gameState.hpp" />
+    <ClInclude Include="menu.hpp" />
     <ClInclude Include="mixer.hpp" />
     <ClInclude Include="character.hpp" />
     <ClInclude Include="rob.hpp" />

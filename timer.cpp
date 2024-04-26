@@ -44,8 +44,8 @@ void Timer::unpause()
     }
 }
 
-Uint32 Timer::getTicks(){
-    Uint32 time = 0;
+int Timer::getTicks(){
+    int time = 0;
     if (mStarted){
         if (mPaused){
             time = mPausedTicks;
@@ -66,3 +66,4 @@ bool Timer::isStarted(){
 bool Timer::isPaused(){
     return mPaused && mStarted;
 }
+

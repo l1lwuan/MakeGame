@@ -10,6 +10,12 @@ public:
 	void render();
 	void updateAnimation();
 	void touched();
+	bool isEnded()
+	{
+		if (currentFrame + 1 < numFrames * 20) return false;
+		currentFrame = 0;
+		return true;
+	}
 private:
 	SDL_Rect destRect;
 	SDL_Renderer* renderer;

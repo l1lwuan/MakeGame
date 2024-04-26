@@ -12,7 +12,7 @@ public:
     void stop();
     void pause();
     void unpause();
-    Uint32 getTicks();
+    int getTicks();
     bool isStarted();
     bool isPaused();
 private:

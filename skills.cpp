@@ -21,17 +21,9 @@ void Skills::render() {
 	SDL_Rect srcRect = { int(currentFrame / 15) * frameWidth, 0, frameWidth, frameHeight };
 	SDL_RendererFlip flip = SDL_FLIP_NONE;
 	SDL_RenderCopyEx(renderer, image, &srcRect, &destRect, 0.0, nullptr, flip);
-	SDL_RenderDrawRect(renderer, &destRect);
 }
 
 void Skills::updateAnimation() {
-	currentFrame = (currentFrame + 1) % (numFrames * 10);
+	currentFrame = (currentFrame + 1) % (numFrames * 20);
 }
 
-void Skills::touched() {
-
-}
-
-
-
-	

@@ -6,13 +6,14 @@
 
 class Character {
 public:
-    Character(SDL_Renderer* renderer, const char* imagePath, int screenWidth, int screenHeight, int frameWidth, int frameHeight, int numFrames, int speed);
+    Character(SDL_Renderer* renderer, const char* imagePath, int screenWidth, int screenHeight, int frameWidth, int frameHeight, int numFrames, int speed, int point);
     ~Character();
     void render();
     void move(int screenWidth, int screenHeight);
     void updateAnimation();
     void touched();
     SDL_Rect getDestRect();
+    int getPoint();
 private:
     SDL_Rect destRect;
     SDL_Rect hitbox;
@@ -25,6 +26,7 @@ private:
     int posX;
     int posY;
     int speed;
+    int point;
     bool movingLeft;
     bool isMoving = true;
 
