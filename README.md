@@ -49,3 +49,146 @@ Game ở nhánh master nhé!
 
 
 link video chơi thử https://www.youtube.com/watch?v=TXK96Zpnud8
+
+
+
+
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\gameState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:gameState.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\gameState.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:gameState.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:character.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\character.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:character.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\background.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:background.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\background.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:background.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|C:\\Users\\thuyb\\source\\repos\\MakeGame\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A0F6D436-1C43-4DB9-92EA-47E61F961270}|MakeGame.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "gameState.cpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\gameState.cpp",
+              "RelativeDocumentMoniker": "gameState.cpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\gameState.cpp",
+              "RelativeToolTip": "gameState.cpp",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-26T09:24:32.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "gameState.hpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\gameState.hpp",
+              "RelativeDocumentMoniker": "gameState.hpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\gameState.hpp",
+              "RelativeToolTip": "gameState.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-26T09:24:30.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "character.cpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\character.cpp",
+              "RelativeDocumentMoniker": "character.cpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\character.cpp",
+              "RelativeToolTip": "character.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-26T09:24:29.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "character.hpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\character.hpp",
+              "RelativeDocumentMoniker": "character.hpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\character.hpp",
+              "RelativeToolTip": "character.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-26T09:24:28.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "background.cpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\background.cpp",
+              "RelativeDocumentMoniker": "background.cpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\background.cpp",
+              "RelativeToolTip": "background.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-26T09:24:26.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "background.hpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\background.hpp",
+              "RelativeDocumentMoniker": "background.hpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\background.hpp",
+              "RelativeToolTip": "background.hpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-26T09:24:25.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\thuyb\\source\\repos\\MakeGame\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-26T09:24:23.758Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
