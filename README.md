@@ -43,3 +43,6 @@ Nếu bạn muốn đóng góp vào việc phát triển của Trò chơi Fish S
 link tải các vật thể: https://craftpix.net/freebies/free-fishing-game-assets-pixel-art-pack/?num=1&count=1612&sq=fising&pos=4
                       https://craftpix.net/freebies/octopus-jellyfish-shark-and-turtle-free-sprite-pixel-art/
                       https://craftpix.net/product/pirate-invasion-game-assets-pixel-art-pack/
+
+
+Game ở nhánh master nhé!
