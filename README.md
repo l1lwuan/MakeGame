@@ -46,3 +46,6 @@ link tải các vật thể: https://craftpix.net/freebies/free-fishing-game-ass
 
 
 Game ở nhánh master nhé!
+
+
+link video chơi thử https://www.youtube.com/watch?v=TXK96Zpnud8
